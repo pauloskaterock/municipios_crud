@@ -1,0 +1,11 @@
+<h1>Municipes Ph Software Engineer</h1>
+
+<ul>
+  <% @municipes.each do |municipe| %>
+    <li>
+      <%= link_to municipe.nome_completo, municipe %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Novo Municipe', new_municipe_path %>
