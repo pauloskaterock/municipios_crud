@@ -50,7 +50,7 @@ class MunicipesController < ApplicationController
     # Exemplo de uso da gem 'mail':
     Mail.deliver do
       to municipe.email
-      from 'seu_email@example.com'
+      from 'pauloengenharia5@yahoo.com'
       subject 'Cadastro/Atualização de Municipe'
       body "Olá #{municipe.nome_completo}, seu cadastro/mudança de status foi realizado com sucesso!"
     end

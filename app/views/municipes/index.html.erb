@@ -1,6 +1,52 @@
-<h1>Municipes Ph Software Engineer</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><br><br>
+  <title>Lista de Munícipes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* Altere para preto (#000) */
+      color: #fff; /* Altere para branco (#fff) */
+    }
 
-<ul>
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.1); /* Altere para uma cor de fundo mais clara se desejar */
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .municipe-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .municipe-item {
+      background-color: #333; /* Altere para uma cor mais escura, se desejar */
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+
+    .municipe-item:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+   <div class="container">
+    <h1>Cadastro de Novos Municipies</h1><br> <br>
+   <ul>
   <% @municipes.each do |municipe| %>
     <li>
       <%= link_to municipe.nome_completo, municipe %>
@@ -8,4 +54,52 @@
   <% end %>
 </ul>
 
+    <p>Clique no botão abaixo para adicionar um novo municípe:</p><br> <br>
+    
 <%= link_to 'Novo Municipe', new_municipe_path %>
+  </div>
+
+  <!-- Rodapé-->
+
+ <style>
+        /* Estilo para o rodapé */
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilo para os links no rodapé */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Estilo para o conteúdo da página */
+        body {
+            margin-bottom: 80px; /* Ajuste conforme a altura do rodapé */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Conteúdo da página -->
+
+    <footer>
+        <p>fortis fortuna adiuvat</p>
+        <nav>
+            <a href="https://github.com/pauloskaterock">GitHub</a>
+            <a href="https://www.linkedin.com/in/pauloengenharia5/">Linkedin</a>
+            <a href="https://softwarephengineer.netlify.app/">Veja meu Website</a>
+           
+        </nav>
+    </footer>
+
+</body>
+</html>
